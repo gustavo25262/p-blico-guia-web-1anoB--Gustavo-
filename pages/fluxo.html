@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo de Projeto Web</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Guia Profissional de Desenvolvimento Web</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="fluxo.html">Fluxo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Fluxograma de um Projeto Web Completo</h2>
+            <svg width="100%" height="auto" viewBox="0 0 800 600">
+                <rect x="50" y="50" width="200" height="100" fill="#2563EB" />
+                <text x="150" y="100" fill="#FFFFFF" text-anchor="middle">Descoberta</text>
+                <line x1="150" y1="150" x2="150" y2="200" stroke="#000" stroke-width="2" />
+                <polygon points="100,200 200,200 150,250" fill="#10B981" />
+                <text x="150" y="225" fill="#FFFFFF" text-anchor="middle">Requisitos</text>
+                <line x1="150" y1="250" x2="150" y2="300" stroke="#000" stroke-width="2" />
+                <rect x="50" y="300" width="200" height="100" fill="#2563EB" />
+                <text x="150" y="350" fill="#FFFFFF" text-anchor="middle">Protótipo</text>
+                <line x1="150" y1="400" x2="150" y2="450" stroke="#000" stroke-width="2" />
+                <polygon points="100,450 200,450 150,500" fill="#10B981" />
+                <text x="150" y="475" fill="#FFFFFF" text-anchor="middle">Design</text>
+                <line x1="150" y1="500" x2="150" y2="550" stroke="#000" stroke-width="2" />
+                <rect x="50" y="550" width="200" height="100" fill="#2563EB" />
+                <text x="150" y="600" fill="#FFFFFF" text-anchor="middle">Implementação</text>
+                <!-- Additional stages can be added here -->
+            </svg>
+            <div class="tooltip" id="tooltip">
+                <p>Descrição da etapa e riscos comuns.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Guia Profissional de Desenvolvimento Web</p>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="fluxo.html">Fluxo</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="../js/app.js"></script>
+</body>
+</html>

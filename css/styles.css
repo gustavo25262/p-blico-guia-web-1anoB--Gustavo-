@@ -1,0 +1,75 @@
+/* 
+This file contains the styles for the website, implementing the specified color scheme, typography, and responsive design features.
+*/
+
+:root {
+    --primary-color: #2563EB; /* blue */
+    --secondary-color: #10B981; /* green */
+    --neutral-text: #111827; /* text */
+    --neutral-bg-light: #F3F4F6; /* light background */
+    --neutral-border: #E5E7EB; /* border color */
+    --font-title: 'Poppins', sans-serif;
+    --font-text: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--neutral-bg-light);
+    color: var(--neutral-text);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--neutral-bg-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+h1 {
+    font-family: var(--font-title);
+    color: var(--primary-color);
+}
+
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--neutral-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--neutral-bg-light);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 10px;
+    }
+
+    .card {
+        margin: 5px;
+    }
+}
