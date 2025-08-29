@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background Elements -->
+        <circle fill="#4A90E2" opacity="0.1" cx="400" cy="300" r="250"/>
+        <circle fill="#2C3E50" opacity="0.1" cx="400" cy="300" r="200"/>
+        
+        <!-- Code Window -->
+        <rect fill="#FFFFFF" x="200" y="150" width="400" height="300" rx="8"/>
+        <rect fill="#F8F9FA" x="200" y="150" width="400" height="40" rx="8"/>
+        <circle fill="#FF6B6B" cx="230" cy="170" r="6"/>
+        <circle fill="#FFD93D" cx="250" cy="170" r="6"/>
+        <circle fill="#6BCB77" cx="270" cy="170" r="6"/>
+        
+        <!-- Code Lines -->
+        <rect fill="#E9ECEF" x="220" y="220" width="200" height="10" rx="2"/>
+        <rect fill="#E9ECEF" x="220" y="240" width="150" height="10" rx="2"/>
+        <rect fill="#4A90E2" x="220" y="260" width="180" height="10" rx="2"/>
+        <rect fill="#E9ECEF" x="220" y="280" width="160" height="10" rx="2"/>
+        <rect fill="#E9ECEF" x="220" y="300" width="190" height="10" rx="2"/>
+        <rect fill="#4A90E2" x="220" y="320" width="140" height="10" rx="2"/>
+        
+        <!-- Decorative Elements -->
+        <circle fill="#4A90E2" opacity="0.2" cx="150" cy="450" r="30"/>
+        <circle fill="#2C3E50" opacity="0.2" cx="650" cy="150" r="40"/>
+        <path d="M700,400 L720,420 L700,440" stroke="#4A90E2" stroke-width="4" opacity="0.5"/>
+        <path d="M100,200 L80,220 L100,240" stroke="#2C3E50" stroke-width="4" opacity="0.5"/>
+    </g>
+</svg>
