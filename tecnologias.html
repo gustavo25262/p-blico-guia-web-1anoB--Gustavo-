@@ -3,22 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda sobre as principais tecnologias do desenvolvimento web moderno">
     <title>Tecnologias - Guia Web</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Menu de navegação será adicionado aqui -->
-        </nav>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>GuiaWeb</span>
+                </a>
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="tecnologias.html" class="active">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo de Trabalho</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Conteúdo sobre tecnologias será adicionado aqui -->
+        <section class="tech-hero">
+            <div class="container">
+                <h1>Tecnologias Web Modernas</h1>
+                <p>Explore as principais tecnologias utilizadas no desenvolvimento web atual.</p>
+            </div>
+        </section>
+
+        <section class="tech-details">
+            <div class="container">
+                <div class="tech-grid-detailed">
+                    <article class="tech-card-detailed">
+                        <div class="tech-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="tech-content">
+                            <h2>HTML5</h2>
+                            <p>HTML (HyperText Markup Language) é a linguagem base da web. Com ela, você:</p>
+                            <ul>
+                                <li>Estrutura o conteúdo das páginas web</li>
+                                <li>Define a semântica dos elementos</li>
+                                <li>Cria formulários interativos</li>
+                                <li>Incorpora mídias como vídeos e áudios</li>
+                            </ul>
+                            <a href="#" class="btn btn-secondary">Aprenda HTML5</a>
+                        </div>
+                    </article>
+
+                    <article class="tech-card-detailed">
+                        <div class="tech-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="tech-content">
+                            <h2>CSS3</h2>
+                            <p>CSS (Cascading Style Sheets) é responsável pela estilização. Com CSS você pode:</p>
+                            <ul>
+                                <li>Criar layouts responsivos</li>
+                                <li>Aplicar animações e transições</li>
+                                <li>Personalizar cores e tipografia</li>
+                                <li>Adaptar o design para diferentes dispositivos</li>
+                            </ul>
+                            <a href="#" class="btn btn-secondary">Aprenda CSS3</a>
+                        </div>
+                    </article>
+
+                    <article class="tech-card-detailed">
+                        <div class="tech-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="tech-content">
+                            <h2>JavaScript</h2>
+                            <p>JavaScript é a linguagem de programação da web. Com ela, você pode:</p>
+                            <ul>
+                                <li>Criar interatividade nas páginas</li>
+                                <li>Manipular dados e fazer requisições</li>
+                                <li>Desenvolver aplicações completas</li>
+                                <li>Trabalhar com APIs e bibliotecas modernas</li>
+                            </ul>
+                            <a href="#" class="btn btn-secondary">Aprenda JavaScript</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-resources">
+            <div class="container">
+                <h2>Recursos Adicionais</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Documentação</h3>
+                        <p>Acesse a documentação oficial de cada tecnologia</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Exemplos Práticos</h3>
+                        <p>Veja exemplos reais de código e projetos</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Exercícios</h3>
+                        <p>Pratique com exercícios interativos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <!-- Footer será adicionado aqui -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GuiaWeb</h4>
+                    <p>Seu guia completo para o desenvolvimento web moderno.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#tecnologias">Tecnologias</a></li>
+                        <li><a href="#recursos">Recursos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GuiaWeb. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/app.js"></script>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teste seus conhecimentos em desenvolvimento web">
+    <title>Quiz - Guia Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>GuiaWeb</span>
+                </a>
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo de Trabalho</a></li>
+                    <li><a href="quiz.html" class="active">Quiz</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="quiz-hero">
+            <div class="container">
+                <h1>Quiz de Desenvolvimento Web</h1>
+                <p>Teste seus conhecimentos sobre HTML, CSS, JavaScript e boas práticas.</p>
+            </div>
+        </section>
+
+        <section class="quiz-section">
+            <div class="container">
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">Questão <span id="current-question">1</span> de <span id="total-questions">10</span></span>
+                    </div>
+
+                    <div class="quiz-content">
+                        <div class="question-container">
+                            <h2 id="question">Carregando questão...</h2>
+                            <div class="options-container">
+                                <!-- As opções serão inseridas via JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="quiz-controls">
+                            <button id="prev-btn" class="btn btn-secondary" disabled>Anterior</button>
+                            <button id="next-btn" class="btn btn-primary">Próxima</button>
+                            <button id="submit-btn" class="btn btn-primary" style="display: none;">Finalizar</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-result" style="display: none;">
+                        <div class="result-content">
+                            <i class="fas fa-trophy"></i>
+                            <h2>Resultado</h2>
+                            <p>Você acertou <span id="correct-answers">0</span> de <span id="total-answers">10</span> questões!</p>
+                            <div class="result-details">
+                                <!-- Detalhes serão inseridos via JavaScript -->
+                            </div>
+                            <button id="restart-btn" class="btn btn-primary">Tentar Novamente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GuiaWeb</h4>
+                    <p>Seu guia completo para o desenvolvimento web moderno.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#tecnologias">Tecnologias</a></li>
+                        <li><a href="#recursos">Recursos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GuiaWeb. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Banco de questões
+        const questions = [
+            {
+                question: "Qual tag HTML é usada para criar um link?",
+                options: ["<link>", "<a>", "<href>", "<url>"],
+                correct: 1
+            },
+            {
+                question: "Qual propriedade CSS é usada para alterar a cor do texto?",
+                options: ["text-color", "color", "font-color", "text-style"],
+                correct: 1
+            },
+            {
+                question: "Qual método JavaScript é usado para selecionar um elemento HTML pelo ID?",
+                options: ["querySelector()", "getElementById()", "selectElement()", "findById()"],
+                correct: 1
+            },
+            {
+                question: "O que significa HTML?",
+                options: [
+                    "Hyper Text Markup Language",
+                    "High Tech Modern Language",
+                    "Hyper Transfer Markup Language",
+                    "Home Tool Markup Language"
+                ],
+                correct: 0
+            },
+            {
+                question: "Qual propriedade CSS é usada para criar espaçamento entre elementos?",
+                options: ["spacing", "margin", "padding", "gap"],
+                correct: 1
+            },
+            {
+                question: "Como declarar uma variável em JavaScript moderno?",
+                options: ["var x = 5;", "let x = 5;", "const x = 5;", "Todas as anteriores"],
+                correct: 3
+            },
+            {
+                question: "Qual seletor CSS seleciona todos os elementos?",
+                options: ["#", ".", "*", "all"],
+                correct: 2
+            },
+            {
+                question: "Qual atributo HTML é usado para definir estilos inline?",
+                options: ["style", "css", "class", "font"],
+                correct: 0
+            },
+            {
+                question: "Como comentar código em JavaScript?",
+                options: [
+                    "<!-- comentário -->",
+                    "// comentário",
+                    "/* comentário */",
+                    "Opções B e C estão corretas"
+                ],
+                correct: 3
+            },
+            {
+                question: "Qual unidade CSS é relativa ao tamanho da fonte do elemento?",
+                options: ["px", "em", "%", "vh"],
+                correct: 1
+            }
+        ];
+
+        // Estado do quiz
+        let currentQuestion = 0;
+        let score = 0;
+        let answers = new Array(questions.length).fill(null);
+
+        // Elementos DOM
+        const questionEl = document.getElementById('question');
+        const optionsContainer = document.querySelector('.options-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const progressBar = document.querySelector('.progress');
+        const currentQuestionEl = document.getElementById('current-question');
+        const quizContent = document.querySelector('.quiz-content');
+        const quizResult = document.querySelector('.quiz-result');
+        const correctAnswers = document.getElementById('correct-answers');
+        const restartBtn = document.getElementById('restart-btn');
+
+        // Carregar questão
+        function loadQuestion() {
+            const question = questions[currentQuestion];
+            questionEl.textContent = question.question;
+            
+            optionsContainer.innerHTML = '';
+            question.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = `option-btn ${answers[currentQuestion] === index ? 'selected' : ''}`;
+                button.textContent = option;
+                button.onclick = () => selectOption(index);
+                optionsContainer.appendChild(button);
+            });
+
+            updateNavigation();
+            updateProgress();
+        }
+
+        // Selecionar opção
+        function selectOption(index) {
+            answers[currentQuestion] = index;
+            loadQuestion();
+        }
+
+        // Atualizar navegação
+        function updateNavigation() {
+            currentQuestionEl.textContent = currentQuestion + 1;
+            prevBtn.disabled = currentQuestion === 0;
+            
+            if (currentQuestion === questions.length - 1) {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'block';
+            } else {
+                nextBtn.style.display = 'block';
+                submitBtn.style.display = 'none';
+            }
+        }
+
+        // Atualizar barra de progresso
+        function updateProgress() {
+            const progress = ((currentQuestion + 1) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        // Mostrar resultados
+        function showResults() {
+            score = answers.reduce((acc, answer, index) => {
+                return answer === questions[index].correct ? acc + 1 : acc;
+            }, 0);
+
+            quizContent.style.display = 'none';
+            quizResult.style.display = 'block';
+            correctAnswers.textContent = score;
+
+            const resultDetails = document.querySelector('.result-details');
+            resultDetails.innerHTML = questions.map((q, i) => `
+                <div class="result-item ${answers[i] === q.correct ? 'correct' : 'incorrect'}">
+                    <p>${i + 1}. ${q.question}</p>
+                    <p>Sua resposta: ${q.options[answers[i]]}</p>
+                    <p>Resposta correta: ${q.options[q.correct]}</p>
+                </div>
+            `).join('');
+        }
+
+        // Event Listeners
+        prevBtn.onclick = () => {
+            currentQuestion--;
+            loadQuestion();
+        };
+
+        nextBtn.onclick = () => {
+            currentQuestion++;
+            loadQuestion();
+        };
+
+        submitBtn.onclick = showResults;
+
+        restartBtn.onclick = () => {
+            currentQuestion = 0;
+            answers = new Array(questions.length).fill(null);
+            quizContent.style.display = 'block';
+            quizResult.style.display = 'none';
+            loadQuestion();
+        };
+
+        // Iniciar quiz
+        loadQuestion();
+    </script>
+</body>
+</html>

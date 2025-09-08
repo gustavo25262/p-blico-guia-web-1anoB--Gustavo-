@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boas práticas essenciais para desenvolvimento web moderno">
+    <title>Boas Práticas - Guia Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>GuiaWeb</span>
+                </a>
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" class="active">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo de Trabalho</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="best-practices-hero">
+            <div class="container">
+                <h1>Boas Práticas em Desenvolvimento Web</h1>
+                <p>Aprenda as melhores práticas para criar sites profissionais, acessíveis e de alta qualidade.</p>
+            </div>
+        </section>
+
+        <section class="best-practices-content">
+            <div class="container">
+                <article class="practice-section">
+                    <div class="practice-header">
+                        <i class="fas fa-universal-access"></i>
+                        <h2>Acessibilidade</h2>
+                    </div>
+                    <div class="practice-content">
+                        <p>Torne seu site acessível para todos os usuários:</p>
+                        <ul class="practice-list">
+                            <li>Use tags HTML semânticas apropriadas</li>
+                            <li>Forneça textos alternativos para imagens</li>
+                            <li>Mantenha contraste adequado de cores</li>
+                            <li>Permita navegação por teclado</li>
+                            <li>Use ARIA quando necessário</li>
+                        </ul>
+                        <div class="example-code">
+                            <code>
+                                <!-- Exemplo de código bom -->
+                                &lt;button aria-label="Fechar"&gt;
+                                    &lt;i class="fas fa-times"&gt;&lt;/i&gt;
+                                &lt;/button&gt;
+                            </code>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="practice-section">
+                    <div class="practice-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h2>Responsividade</h2>
+                    </div>
+                    <div class="practice-content">
+                        <p>Garanta que seu site funcione em todos os dispositivos:</p>
+                        <ul class="practice-list">
+                            <li>Use Media Queries para diferentes telas</li>
+                            <li>Adote o conceito Mobile First</li>
+                            <li>Utilize unidades flexíveis (rem, em, %)</li>
+                            <li>Teste em múltiplos dispositivos</li>
+                            <li>Otimize imagens para diferentes resoluções</li>
+                        </ul>
+                        <div class="example-code">
+                            <code>
+                                /* Exemplo de Media Query */
+                                @media (max-width: 768px) {
+                                    .container {
+                                        width: 100%;
+                                        padding: 0 1rem;
+                                    }
+                                }
+                            </code>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="practice-section">
+                    <div class="practice-header">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h2>Performance</h2>
+                    </div>
+                    <div class="practice-content">
+                        <p>Otimize o desempenho do seu site:</p>
+                        <ul class="practice-list">
+                            <li>Minimize arquivos CSS e JavaScript</li>
+                            <li>Otimize e comprima imagens</li>
+                            <li>Use lazy loading para imagens</li>
+                            <li>Implemente cache adequadamente</li>
+                            <li>Reduza requisições ao servidor</li>
+                        </ul>
+                        <div class="example-code">
+                            <code>
+                                &lt;img src="imagem.jpg" 
+                                     loading="lazy"
+                                     alt="Descrição da imagem"&gt;
+                            </code>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="practice-section">
+                    <div class="practice-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h2>Segurança</h2>
+                    </div>
+                    <div class="practice-content">
+                        <p>Proteja seu site e seus usuários:</p>
+                        <ul class="practice-list">
+                            <li>Use HTTPS em todo o site</li>
+                            <li>Sanitize dados de entrada</li>
+                            <li>Proteja contra XSS e CSRF</li>
+                            <li>Mantenha dependências atualizadas</li>
+                            <li>Implemente políticas de segurança</li>
+                        </ul>
+                        <div class="example-code">
+                            <code>
+                                &lt;meta http-equiv="Content-Security-Policy" 
+                                      content="default-src 'self'"&gt;
+                            </code>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="best-practices-checklist">
+            <div class="container">
+                <h2>Checklist de Boas Práticas</h2>
+                <div class="checklist-grid">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1">
+                        <label for="check1">Validar código HTML/CSS</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2">
+                        <label for="check2">Testar em múltiplos navegadores</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3">
+                        <label for="check3">Otimizar assets</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check4">
+                        <label for="check4">Verificar acessibilidade</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check5">
+                        <label for="check5">Testar responsividade</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check6">
+                        <label for="check6">Revisar SEO básico</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GuiaWeb</h4>
+                    <p>Seu guia completo para o desenvolvimento web moderno.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#tecnologias">Tecnologias</a></li>
+                        <li><a href="#recursos">Recursos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GuiaWeb. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
